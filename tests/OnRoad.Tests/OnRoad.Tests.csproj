@@ -18,4 +18,8 @@
         <Using Include="Xunit"/>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\..\src\OnRoad.API\OnRoad.API.csproj" />
+    </ItemGroup>
+
 </Project>
