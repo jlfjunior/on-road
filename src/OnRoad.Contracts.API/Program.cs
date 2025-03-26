@@ -1,8 +1,9 @@
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using OnRoad.API.Application;
-using OnRoad.API.Domain;
-using OnRoad.API.Infrastructure;
+using OnRoad.Contracts.API.Application;
+using OnRoad.Contracts.API.Domain;
+using OnRoad.Contracts.API.Infrastructure;
+using Plan = OnRoad.Contracts.API.Domain.Plan;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,7 +13,7 @@ builder.Services.AddScoped<ContractService>();
 
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(Program).Assembly));
 
-builder.Services.AddDbContext<Context>(opt => opt.UseNpgsql("OnRoad"));
+builder.Services.AddDbContext<ContractsDbContext>(opt => opt.UseNpgsql("EventStore"));
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -28,6 +29,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+
 app.MapPost("/plans", (AddPlanRequest request, IMediator mediator) =>
     {
         mediator.Send(request);
@@ -37,7 +39,7 @@ app.MapPost("/plans", (AddPlanRequest request, IMediator mediator) =>
     .WithName("AddPlan")
     .WithOpenApi();
 
-app.MapGet("/plans", async (Context context) =>
+app.MapGet("/plans", async (ContractsDbContext context) =>
     {
         var plans = await context.Set<Plan>().ToListAsync();
 
@@ -64,7 +66,7 @@ app.MapPost("/contracts{id}/finish", (FinishContractRequest request, IMediator m
     .WithName("FinishContract")
     .WithOpenApi();
 
-app.MapGet("/contracts", async(Context context) =>
+app.MapGet("/contracts", async(ContractsDbContext context) =>
     {
         var contracts = await context.Set<Contract>().ToListAsync();
         
