@@ -2,7 +2,7 @@ using MediatR;
 using OnRoad.API.Domain;
 using OnRoad.API.Infrastructure;
 
-namespace OnRoad.API.Application;
+namespace OnRoad.API.Contracts;
 
 public class ContractService : 
     IRequestHandler<AddContractRequest>,
