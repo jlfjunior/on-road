@@ -1,6 +1,7 @@
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using OnRoad.API.Application;
+using OnRoad.API.Contracts;
+using OnRoad.API.Customers;
 using OnRoad.API.Domain;
 using OnRoad.API.Infrastructure;
 using Scalar.AspNetCore;
@@ -29,49 +30,5 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.MapPost("/plans", (AddPlanRequest request, IMediator mediator) =>
-    {
-        mediator.Send(request);
-        
-        return Results.Ok();
-    })
-    .WithName("AddPlan")
-    .WithOpenApi();
-
-app.MapGet("/plans", async (Context context) =>
-    {
-        var plans = await context.Set<Plan>().ToListAsync();
-
-        return Results.Ok(plans);
-    })
-    .WithName("GetPlans")
-    .WithOpenApi();
-
-app.MapPost("/contracts", (AddContractRequest request, IMediator mediator) =>
-    {
-        mediator.Send(request);
-        
-        return Results.Ok();
-    })
-    .WithName("AddContract")
-    .WithOpenApi();
-
-app.MapPost("/contracts{id}/finish", (FinishContractRequest request, IMediator mediator) =>
-    {
-        mediator.Send(request);
-        
-        return Results.Ok();
-    })
-    .WithName("FinishContract")
-    .WithOpenApi();
-
-app.MapGet("/contracts", async(Context context) =>
-    {
-        var contracts = await context.Set<Contract>().ToListAsync();
-        
-        return Results.Ok(contracts);
-    })
-    .WithName("GetContract")
-    .WithOpenApi();
-
+app.MapCustomerEndpoints();
 app.Run();
