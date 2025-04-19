@@ -1,0 +1,20 @@
+services:
+  postgres:
+    image: postgres
+    container_name: pgsql_customers
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgsql_data:/var/lib/postgresql/data
+    networks:
+      - customers_net
+
+volumes:
+  pgsql_data:
+
+networks:
+  customers_net:
