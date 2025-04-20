@@ -11,6 +11,6 @@ public class CustomerDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.ApplyConfiguration(new CustomerConfiguration());
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(CustomerDbContext).Assembly);
     }
 }

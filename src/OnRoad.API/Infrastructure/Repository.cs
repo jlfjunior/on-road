@@ -43,4 +43,11 @@ public class Repository<T> : IRepository<T> where T : class, IEntity
         
         return customers;
     }
+
+    public async Task DeleteAsync(T entity)
+    {
+        _dbContext.Set<T>().Remove(entity);
+        
+        await _dbContext.SaveChangesAsync();
+    }
 }
