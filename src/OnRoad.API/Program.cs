@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using OnRoad.API;
+using OnRoad.API.Features.Contracts;
 using OnRoad.API.Features.Customers;
 using OnRoad.API.Features.Vehicles;
 using OnRoad.API.Infrastructure;
@@ -14,6 +15,7 @@ var connectionString = builder.Configuration.GetConnectionString("OnRoad");
 
 builder.Services.AddDbContext<CustomerDbContext>(options => options.UseNpgsql(connectionString));
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+builder.Services.AddScoped<IPlanRepository, PlanRepository>();
 
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
@@ -33,6 +35,8 @@ app.UseHttpsRedirection();
 
 app.MapCustomerEndpoints();
 app.MapVehicleEndpoints();
+app.MapLocationEndpoints();
+app.MapPlanEndpoins();
 
 app.Run();
 

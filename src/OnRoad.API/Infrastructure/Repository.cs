@@ -6,35 +6,35 @@ namespace OnRoad.API.Infrastructure;
 
 public class Repository<T> : IRepository<T> where T : class, IEntity 
 {
-    readonly CustomerDbContext _dbContext;
+    protected readonly CustomerDbContext DbContext;
 
     public Repository(CustomerDbContext dbContext)
     {
-        _dbContext = dbContext;
+        DbContext = dbContext;
     }
 
     public async Task<T> GetAsync(Guid id)
     {
-        var customer = await _dbContext.Set<T>().FindAsync(id);
+        var customer = await DbContext.Set<T>().FindAsync(id);
         
         return customer;
     }
 
     public async Task StoreAsync(T entity)
     {
-        var existingEntity = await _dbContext.Set<T>().FindAsync(entity.Id);
+        var existingEntity = await DbContext.Set<T>().FindAsync(entity.Id);
         
         if (entity.Id == Guid.Empty || existingEntity == null)
-            _dbContext.Set<T>().Add(entity);
+            DbContext.Set<T>().Add(entity);
         else
-            _dbContext.Entry(entity).State = EntityState.Modified;
+            DbContext.Entry(entity).State = EntityState.Modified;
         
-        await _dbContext.SaveChangesAsync();
+        await DbContext.SaveChangesAsync();
     }
 
     public async Task<IEnumerable<T>> GetAllAsync(Expression<Func<T, bool>> filter = null)
     {
-        var query = _dbContext.Set<T>();
+        var query = DbContext.Set<T>();
         
         if (filter != null) 
             query.Where(filter);
@@ -46,8 +46,8 @@ public class Repository<T> : IRepository<T> where T : class, IEntity
 
     public async Task DeleteAsync(T entity)
     {
-        _dbContext.Set<T>().Remove(entity);
+        DbContext.Set<T>().Remove(entity);
         
-        await _dbContext.SaveChangesAsync();
+        await DbContext.SaveChangesAsync();
     }
 }
