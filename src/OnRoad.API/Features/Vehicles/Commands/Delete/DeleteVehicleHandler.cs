@@ -1,6 +1,8 @@
 using MediatR;
-using OnRoad.API.Domain;
 using OnRoad.API.Infrastructure;
+using OnRoad.Domain;
+using OnRoad.Domain.Entities;
+using OnRoad.Domain.Exceptions;
 
 namespace OnRoad.API.Features.Vehicles.Commands.Delete;
 

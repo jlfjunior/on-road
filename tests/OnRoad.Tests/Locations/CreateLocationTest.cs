@@ -1,9 +1,10 @@
 using System.Net.Http.Json;
 using Microsoft.Extensions.DependencyInjection;
-using OnRoad.API.Domain;
 using OnRoad.API.Features.Contracts.Locations.Commands.Create;
 using OnRoad.API.Features.Contracts.Locations.Responses;
 using OnRoad.API.Infrastructure;
+using OnRoad.Domain;
+using OnRoad.Domain.Entities;
 
 namespace OnRoad.Tests.Locations;
 

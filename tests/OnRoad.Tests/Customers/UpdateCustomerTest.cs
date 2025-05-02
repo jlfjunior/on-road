@@ -2,9 +2,10 @@
 using Bogus;
 using Bogus.Extensions.Brazil;
 using Microsoft.Extensions.DependencyInjection;
-using OnRoad.API.Domain;
 using OnRoad.API.Features.Customers.Update;
 using OnRoad.API.Infrastructure;
+using OnRoad.Domain;
+using OnRoad.Domain.Entities;
 
 namespace OnRoad.Tests.Customers;
 

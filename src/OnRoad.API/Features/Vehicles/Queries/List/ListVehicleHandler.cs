@@ -1,7 +1,8 @@
 using MediatR;
-using OnRoad.API.Domain;
 using OnRoad.API.Features.Vehicles.Responses;
 using OnRoad.API.Infrastructure;
+using OnRoad.Domain;
+using OnRoad.Domain.Entities;
 
 namespace OnRoad.API.Features.Vehicles.Queries.List;
 

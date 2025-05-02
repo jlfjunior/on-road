@@ -2,9 +2,10 @@ using System.Net;
 using System.Net.Http.Json;
 using Bogus;
 using Microsoft.Extensions.DependencyInjection;
-using OnRoad.API.Domain;
 using OnRoad.API.Features.Customers.Queries.List;
 using OnRoad.API.Infrastructure;
+using OnRoad.Domain;
+using OnRoad.Domain.Entities;
 
 namespace OnRoad.Tests.Vehicles;
 

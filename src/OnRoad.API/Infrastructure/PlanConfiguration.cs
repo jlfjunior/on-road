@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using OnRoad.API.Domain;
+using OnRoad.Domain;
+using OnRoad.Domain.Entities;
 
 namespace OnRoad.API.Infrastructure;
 

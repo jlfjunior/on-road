@@ -1,6 +1,6 @@
-using OnRoad.SharedKernel;
+﻿using OnRoad.SharedKernel;
 
-namespace OnRoad.API.Domain;
+namespace OnRoad.Domain.Entities;
 
 public class Customer : IEntity
 {

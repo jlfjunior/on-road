@@ -1,10 +1,11 @@
 using System.Net.Http.Json;
 using Bogus;
 using Microsoft.Extensions.DependencyInjection;
-using OnRoad.API.Domain;
 using OnRoad.API.Features.Contracts.Plans.Commands.Update;
 using OnRoad.API.Features.Contracts.Plans.Responses;
 using OnRoad.API.Infrastructure;
+using OnRoad.Domain;
+using OnRoad.Domain.Entities;
 
 namespace OnRoad.Tests.Plans;
 

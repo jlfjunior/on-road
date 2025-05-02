@@ -1,7 +1,8 @@
 using MediatR;
-using OnRoad.API.Domain;
 using OnRoad.API.Features.Contracts.Plans.Responses;
 using OnRoad.API.Infrastructure;
+using OnRoad.Domain;
+using OnRoad.Domain.Exceptions;
 
 namespace OnRoad.API.Features.Contracts.Plans.Commands.Update;
 

@@ -36,7 +36,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\OnRoad.SharedKernel\OnRoad.SharedKernel.csproj" />
+      <ProjectReference Include="..\OnRoad.Domain\OnRoad.Domain.csproj" />
     </ItemGroup>
 
 </Project>
