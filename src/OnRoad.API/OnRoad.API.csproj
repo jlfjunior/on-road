@@ -29,6 +29,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="Features\Contracts\Locations\" />
       <Folder Include="Features\Customers\Commands\" />
       <Folder Include="Features\Customers\Queries\" />
       <Folder Include="Migrations\" />
