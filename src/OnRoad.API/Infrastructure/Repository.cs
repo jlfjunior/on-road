@@ -1,6 +1,6 @@
 using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
-using OnRoad.API.Domain;
+using OnRoad.SharedKernel;
 
 namespace OnRoad.API.Infrastructure;
 

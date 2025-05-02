@@ -1,3 +1,5 @@
+using OnRoad.SharedKernel;
+
 namespace OnRoad.API.Domain;
 
 public class Plan : IEntity

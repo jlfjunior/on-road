@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnRoad.API", "src\OnRoad.AP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnRoad.Tests", "tests\OnRoad.Tests\OnRoad.Tests.csproj", "{F0EDE6B5-318A-4F49-B972-5595940B18DF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnRoad.SharedKernel", "src\OnRoad.SharedKernel\OnRoad.SharedKernel.csproj", "{D2A52E44-ECD2-4DCD-B51E-3922D9064217}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{F0EDE6B5-318A-4F49-B972-5595940B18DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F0EDE6B5-318A-4F49-B972-5595940B18DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F0EDE6B5-318A-4F49-B972-5595940B18DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2A52E44-ECD2-4DCD-B51E-3922D9064217}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2A52E44-ECD2-4DCD-B51E-3922D9064217}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2A52E44-ECD2-4DCD-B51E-3922D9064217}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2A52E44-ECD2-4DCD-B51E-3922D9064217}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

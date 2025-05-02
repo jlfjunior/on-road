@@ -1,4 +1,4 @@
-namespace OnRoad.API.Domain;
+﻿namespace OnRoad.SharedKernel;
 
 public interface IEntity
 {
