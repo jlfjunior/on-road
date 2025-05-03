@@ -1,7 +1,6 @@
 using MediatR;
-using OnRoad.API.Infrastructure;
-using OnRoad.Domain;
 using OnRoad.Domain.Entities;
+using OnRoad.Infrastructure.Repositories;
 
 namespace OnRoad.API.Features.Customers.Queries.List;
 

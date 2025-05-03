@@ -4,6 +4,8 @@ using OnRoad.API.Features.Contracts;
 using OnRoad.API.Features.Customers;
 using OnRoad.API.Features.Vehicles;
 using OnRoad.API.Infrastructure;
+using OnRoad.Infrastructure;
+using OnRoad.Infrastructure.Repositories;
 using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);

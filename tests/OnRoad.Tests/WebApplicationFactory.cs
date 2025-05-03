@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using OnRoad.API.Infrastructure;
+using OnRoad.Infrastructure;
 
 namespace OnRoad.Tests;
 

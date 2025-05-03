@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace OnRoad.API.Infrastructure;
+namespace OnRoad.Infrastructure;
 
 public class CustomerDbContext : DbContext
 {

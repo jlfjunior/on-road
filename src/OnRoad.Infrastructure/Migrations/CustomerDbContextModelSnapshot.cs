@@ -2,21 +2,18 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
-using OnRoad.API.Infrastructure;
+using OnRoad.Infrastructure;
 
 #nullable disable
 
-namespace OnRoad.API.Migrations
+namespace OnRoad.Infrastructure.Migrations
 {
     [DbContext(typeof(CustomerDbContext))]
-    [Migration("20250421174929_TablePlans")]
-    partial class TablePlans
+    partial class CustomerDbContextModelSnapshot : ModelSnapshot
     {
-        /// <inheritdoc />
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -25,7 +22,7 @@ namespace OnRoad.API.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("OnRoad.API.Domain.Customer", b =>
+            modelBuilder.Entity("OnRoad.Domain.Entities.Customer", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -48,7 +45,45 @@ namespace OnRoad.API.Migrations
                     b.ToTable("Customers", (string)null);
                 });
 
-            modelBuilder.Entity("OnRoad.API.Domain.Plan", b =>
+            modelBuilder.Entity("OnRoad.Domain.Entities.Location", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<decimal>("Amount")
+                        .HasColumnType("numeric");
+
+                    b.Property<Guid>("CustomerId")
+                        .HasColumnType("uuid");
+
+                    b.Property<DateOnly>("EndDate")
+                        .HasColumnType("date");
+
+                    b.Property<DateOnly>("FinishedAt")
+                        .HasColumnType("date");
+
+                    b.Property<decimal>("Penalty")
+                        .HasColumnType("numeric");
+
+                    b.Property<Guid>("PlanId")
+                        .HasColumnType("uuid");
+
+                    b.Property<int>("PlanVersion")
+                        .HasColumnType("integer");
+
+                    b.Property<DateOnly>("StartDate")
+                        .HasColumnType("date");
+
+                    b.Property<Guid>("VehicleId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Locations", (string)null);
+                });
+
+            modelBuilder.Entity("OnRoad.Domain.Entities.Plan", b =>
                 {
                     b.Property<Guid>("Id")
                         .HasColumnType("uuid");
@@ -77,7 +112,7 @@ namespace OnRoad.API.Migrations
                     b.ToTable("Plans", (string)null);
                 });
 
-            modelBuilder.Entity("OnRoad.API.Domain.Vehicle", b =>
+            modelBuilder.Entity("OnRoad.Domain.Entities.Vehicle", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()

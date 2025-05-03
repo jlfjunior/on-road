@@ -1,9 +1,8 @@
 using System.Net;
 using Bogus;
 using Microsoft.Extensions.DependencyInjection;
-using OnRoad.API.Infrastructure;
-using OnRoad.Domain;
 using OnRoad.Domain.Entities;
+using OnRoad.Infrastructure.Repositories;
 
 namespace OnRoad.Tests.Vehicles;
 

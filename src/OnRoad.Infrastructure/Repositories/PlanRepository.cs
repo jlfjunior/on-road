@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
-using OnRoad.Domain;
+using OnRoad.API.Infrastructure;
 using OnRoad.Domain.Entities;
 
-namespace OnRoad.API.Infrastructure;
+namespace OnRoad.Infrastructure.Repositories;
 
 public class PlanRepository : Repository<Plan>, IPlanRepository
 {

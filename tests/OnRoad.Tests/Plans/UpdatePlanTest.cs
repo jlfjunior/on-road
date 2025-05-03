@@ -3,9 +3,8 @@ using Bogus;
 using Microsoft.Extensions.DependencyInjection;
 using OnRoad.API.Features.Contracts.Plans.Commands.Update;
 using OnRoad.API.Features.Contracts.Plans.Responses;
-using OnRoad.API.Infrastructure;
-using OnRoad.Domain;
 using OnRoad.Domain.Entities;
+using OnRoad.Infrastructure.Repositories;
 
 namespace OnRoad.Tests.Plans;
 

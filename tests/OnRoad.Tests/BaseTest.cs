@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using OnRoad.API.Infrastructure;
+using OnRoad.Infrastructure;
 
 namespace OnRoad.Tests;
 

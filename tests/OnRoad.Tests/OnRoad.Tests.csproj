@@ -23,6 +23,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\src\OnRoad.API\OnRoad.API.csproj" />
+      <ProjectReference Include="..\..\src\OnRoad.Infrastructure\OnRoad.Infrastructure.csproj" />
     </ItemGroup>
 
 </Project>

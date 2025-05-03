@@ -1,7 +1,6 @@
-using OnRoad.Domain;
 using OnRoad.Domain.Entities;
 
-namespace OnRoad.API.Infrastructure;
+namespace OnRoad.Infrastructure.Repositories;
 
 public interface IPlanRepository : IRepository<Plan>
 {
