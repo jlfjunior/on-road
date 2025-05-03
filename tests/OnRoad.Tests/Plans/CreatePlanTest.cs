@@ -1,7 +1,7 @@
 using System.Net.Http.Json;
 using Bogus;
-using OnRoad.API.Features.Contracts.Plans.Commands.Create;
 using OnRoad.API.Features.Contracts.Plans.Responses;
+using OnRoad.Features.Contracts.Plans.Commands.Create;
 
 namespace OnRoad.Tests.Plans;
 

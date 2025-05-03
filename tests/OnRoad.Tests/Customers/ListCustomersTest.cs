@@ -2,8 +2,8 @@
 using Bogus;
 using Bogus.Extensions.Brazil;
 using Microsoft.Extensions.DependencyInjection;
-using OnRoad.API.Features.Customers.Queries.List;
 using OnRoad.Domain.Entities;
+using OnRoad.Features.Customers.Queries.List;
 using OnRoad.Infrastructure.Repositories;
 
 namespace OnRoad.Tests.Customers;

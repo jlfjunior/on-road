@@ -29,13 +29,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Features\Contracts\Locations\" />
-      <Folder Include="Features\Customers\Commands\" />
-      <Folder Include="Features\Customers\Queries\" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\OnRoad.Domain\OnRoad.Domain.csproj" />
+      <ProjectReference Include="..\..\OnRoad.Features\OnRoad.Features.csproj" />
       <ProjectReference Include="..\OnRoad.Infrastructure\OnRoad.Infrastructure.csproj" />
     </ItemGroup>
 

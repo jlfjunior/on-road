@@ -1,9 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using OnRoad.API;
-using OnRoad.API.Features.Contracts;
-using OnRoad.API.Features.Customers;
-using OnRoad.API.Features.Vehicles;
+using OnRoad.API.Endpoints;
 using OnRoad.API.Infrastructure;
+using OnRoad.Features;
 using OnRoad.Infrastructure;
 using OnRoad.Infrastructure.Repositories;
 using Scalar.AspNetCore;
@@ -11,7 +10,7 @@ using Scalar.AspNetCore;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddMediatR(options => options.RegisterServicesFromAssemblyContaining<Program>());
+builder.Services.AddMediatR(options => options.RegisterServicesFromAssemblyContaining<IFeatureAssembly>());
 
 var connectionString = builder.Configuration.GetConnectionString("OnRoad");
 
