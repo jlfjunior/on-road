@@ -1,8 +1,8 @@
 using MediatR;
 using Microsoft.Extensions.Logging;
-using OnRoad.API.Features.Contracts.Plans.Responses;
+using OnRoad.Domain;
 using OnRoad.Domain.Exceptions;
-using OnRoad.Infrastructure.Repositories;
+using OnRoad.Features.Contracts.Plans.Responses;
 
 namespace OnRoad.Features.Contracts.Plans.Commands.Update;
 

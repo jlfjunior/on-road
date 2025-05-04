@@ -1,7 +1,7 @@
 using MediatR;
 using Microsoft.Extensions.Logging;
 using OnRoad.Domain.Entities;
-using OnRoad.Infrastructure.Repositories;
+using OnRoad.SharedKernel;
 
 namespace OnRoad.Features.Customers.Queries.List;
 

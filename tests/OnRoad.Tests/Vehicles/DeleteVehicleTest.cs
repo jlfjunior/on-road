@@ -2,7 +2,7 @@ using System.Net;
 using Bogus;
 using Microsoft.Extensions.DependencyInjection;
 using OnRoad.Domain.Entities;
-using OnRoad.Infrastructure.Repositories;
+using OnRoad.SharedKernel;
 
 namespace OnRoad.Tests.Vehicles;
 

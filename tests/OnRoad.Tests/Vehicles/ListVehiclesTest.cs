@@ -4,7 +4,7 @@ using Bogus;
 using Microsoft.Extensions.DependencyInjection;
 using OnRoad.Domain.Entities;
 using OnRoad.Features.Customers.Queries.List;
-using OnRoad.Infrastructure.Repositories;
+using OnRoad.SharedKernel;
 
 namespace OnRoad.Tests.Vehicles;
 

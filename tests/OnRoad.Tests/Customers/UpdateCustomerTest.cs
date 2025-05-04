@@ -4,7 +4,7 @@ using Bogus.Extensions.Brazil;
 using Microsoft.Extensions.DependencyInjection;
 using OnRoad.Domain.Entities;
 using OnRoad.Features.Customers.Commands.Update;
-using OnRoad.Infrastructure.Repositories;
+using OnRoad.SharedKernel;
 
 namespace OnRoad.Tests.Customers;
 

@@ -1,9 +1,11 @@
 using System.Net.Http.Json;
 using Microsoft.Extensions.DependencyInjection;
+using OnRoad.Domain;
 using OnRoad.Domain.Entities;
 using OnRoad.Features.Contracts.Locations.Commands.Create;
 using OnRoad.Features.Contracts.Locations.Responses;
 using OnRoad.Infrastructure.Repositories;
+using OnRoad.SharedKernel;
 
 namespace OnRoad.Tests.Locations;
 

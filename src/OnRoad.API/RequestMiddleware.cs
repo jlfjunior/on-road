@@ -1,4 +1,3 @@
-using OnRoad.Domain;
 using OnRoad.Domain.Exceptions;
 
 namespace OnRoad.API;

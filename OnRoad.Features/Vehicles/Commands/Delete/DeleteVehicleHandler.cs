@@ -1,9 +1,8 @@
 using MediatR;
 using Microsoft.Extensions.Logging;
-using OnRoad.API.Features.Vehicles.Commands.Delete;
 using OnRoad.Domain.Entities;
 using OnRoad.Domain.Exceptions;
-using OnRoad.Infrastructure.Repositories;
+using OnRoad.SharedKernel;
 
 namespace OnRoad.Features.Vehicles.Commands.Delete;
 

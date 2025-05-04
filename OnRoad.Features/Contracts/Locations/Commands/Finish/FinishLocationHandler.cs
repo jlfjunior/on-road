@@ -1,8 +1,9 @@
 using MediatR;
 using Microsoft.Extensions.Logging;
+using OnRoad.Domain;
 using OnRoad.Domain.Entities;
 using OnRoad.Features.Contracts.Locations.Responses;
-using OnRoad.Infrastructure.Repositories;
+using OnRoad.SharedKernel;
 
 namespace OnRoad.Features.Contracts.Locations.Commands.Finish;
 

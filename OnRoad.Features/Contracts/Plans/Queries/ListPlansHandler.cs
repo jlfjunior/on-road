@@ -1,7 +1,7 @@
 using MediatR;
-using OnRoad.API.Features.Contracts.Plans.Responses;
 using OnRoad.Domain.Entities;
-using OnRoad.Infrastructure.Repositories;
+using OnRoad.Features.Contracts.Plans.Responses;
+using OnRoad.SharedKernel;
 
 namespace OnRoad.API.Features.Contracts.Plans.Queries;
 

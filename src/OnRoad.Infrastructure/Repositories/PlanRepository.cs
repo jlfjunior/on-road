@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using OnRoad.API.Infrastructure;
+using OnRoad.Domain;
 using OnRoad.Domain.Entities;
 
 namespace OnRoad.Infrastructure.Repositories;

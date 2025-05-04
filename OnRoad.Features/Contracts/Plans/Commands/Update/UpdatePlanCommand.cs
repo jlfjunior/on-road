@@ -1,5 +1,5 @@
 using MediatR;
-using OnRoad.API.Features.Contracts.Plans.Responses;
+using OnRoad.Features.Contracts.Plans.Responses;
 
 namespace OnRoad.Features.Contracts.Plans.Commands.Update;
 

@@ -1,9 +1,9 @@
 using MediatR;
 using Microsoft.Extensions.Logging;
 using OnRoad.API.Features.Vehicles.Queries.List;
-using OnRoad.API.Features.Vehicles.Responses;
 using OnRoad.Domain.Entities;
-using OnRoad.Infrastructure.Repositories;
+using OnRoad.Features.Vehicles.Responses;
+using OnRoad.SharedKernel;
 
 namespace OnRoad.Features.Vehicles.Queries.List;
 

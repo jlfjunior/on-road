@@ -1,6 +1,7 @@
 using OnRoad.Domain.Entities;
+using OnRoad.SharedKernel;
 
-namespace OnRoad.Infrastructure.Repositories;
+namespace OnRoad.Domain;
 
 public interface IPlanRepository : IRepository<Plan>
 {

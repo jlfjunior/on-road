@@ -1,7 +1,6 @@
 using System.Linq.Expressions;
-using OnRoad.SharedKernel;
 
-namespace OnRoad.Infrastructure.Repositories;
+namespace OnRoad.SharedKernel;
 
 public interface IRepository<T> where T : IEntity 
 {

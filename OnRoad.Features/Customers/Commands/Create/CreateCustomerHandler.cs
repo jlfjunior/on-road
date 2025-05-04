@@ -2,7 +2,7 @@ using MediatR;
 using Microsoft.Extensions.Logging;
 using OnRoad.Domain.Entities;
 using OnRoad.Domain.Exceptions;
-using OnRoad.Infrastructure.Repositories;
+using OnRoad.SharedKernel;
 
 namespace OnRoad.Features.Customers.Commands.Create;
 
