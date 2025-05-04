@@ -11,6 +11,14 @@ public class FinishLocationHandler : IRequestHandler<FinishLocationCommand, Loca
     private readonly ILogger<FinishLocationHandler> _logger;
     private readonly IRepository<Location> _locationRepository;
     private readonly IPlanRepository _planRepository;
+
+
+    public FinishLocationHandler(ILogger<FinishLocationHandler> logger, IRepository<Location> locationRepository, IPlanRepository planRepository)
+    {
+        _logger = logger;
+        _locationRepository = locationRepository;
+        _planRepository = planRepository;
+    }
     
     public async Task<LocationResponse> Handle(FinishLocationCommand request, CancellationToken cancellationToken)
     {
@@ -19,10 +27,10 @@ public class FinishLocationHandler : IRequestHandler<FinishLocationCommand, Loca
         
         location.Finish(request.FinishedAt, plan.ExtraDayRate, plan.PenaltyFee);
             
-        var locationReponse = new LocationResponse(Guid.Empty);
+        var response = new LocationResponse(plan.Id);
         
-        _logger.LogInformation("");
+        _logger.LogInformation($"Finished location: {location.Id}");
         
-        return locationReponse;
+        return response;
     }
 }
