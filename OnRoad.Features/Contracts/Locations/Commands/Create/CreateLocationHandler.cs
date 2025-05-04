@@ -6,15 +6,15 @@ using OnRoad.Infrastructure.Repositories;
 
 namespace OnRoad.Features.Contracts.Locations.Commands.Create;
 
-public class CreateLocationtHandler : IRequestHandler<CreateLocationCommand, LocationResponse>
+public class CreateLocationHandler : IRequestHandler<CreateLocationCommand, LocationResponse>
 {
-    readonly ILogger<CreateLocationtHandler> _logger;
+    readonly ILogger<CreateLocationHandler> _logger;
     readonly IRepository<Location> _locationRepository;
     readonly IPlanRepository _planRepository;
     readonly IRepository<Customer> _customerRepository;
     readonly IRepository<Vehicle> _vehicleRepository;
 
-    public CreateLocationtHandler(ILogger<CreateLocationtHandler> logger, 
+    public CreateLocationHandler(ILogger<CreateLocationHandler> logger, 
         IRepository<Location> locationRepository, 
         IPlanRepository planRepository,
         IRepository<Customer> customerRepository, 
