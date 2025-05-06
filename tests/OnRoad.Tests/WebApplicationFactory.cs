@@ -19,7 +19,7 @@ public class CustomWebApplicationFactory<TProgram>
         {
             var dbContextDescriptor = services.SingleOrDefault(
                 d => d.ServiceType == 
-                     typeof(IDbContextOptionsConfiguration<CustomerDbContext>));
+                     typeof(IDbContextOptionsConfiguration<OnRoadContext>));
 
             services.Remove(dbContextDescriptor);
 
@@ -38,7 +38,7 @@ public class CustomWebApplicationFactory<TProgram>
                 Database = $"OnRoadTestDb_{Guid.NewGuid():N}"
             };
             
-            services.AddDbContext<CustomerDbContext>(options =>
+            services.AddDbContext<OnRoadContext>(options =>
                 options.UseNpgsql(builderString.ConnectionString), ServiceLifetime.Singleton);
         });
 

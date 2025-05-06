@@ -16,7 +16,7 @@ builder.Services.AddMediatR(options => options.RegisterServicesFromAssemblyConta
 
 var connectionString = builder.Configuration.GetConnectionString("OnRoad");
 
-builder.Services.AddDbContext<CustomerDbContext>(options => options.UseNpgsql(connectionString));
+builder.Services.AddDbContext<OnRoadContext>(options => options.UseNpgsql(connectionString));
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 builder.Services.AddScoped<IPlanRepository, PlanRepository>();
 

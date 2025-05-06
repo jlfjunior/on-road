@@ -11,7 +11,7 @@ using OnRoad.Infrastructure;
 
 namespace OnRoad.Infrastructure.Migrations
 {
-    [DbContext(typeof(CustomerDbContext))]
+    [DbContext(typeof(OnRoadContext))]
     [Migration("20250502155959_Initial")]
     partial class Initial
     {

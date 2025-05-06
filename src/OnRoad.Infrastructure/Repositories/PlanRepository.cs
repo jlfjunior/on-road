@@ -7,7 +7,7 @@ namespace OnRoad.Infrastructure.Repositories;
 
 public class PlanRepository : Repository<Plan>, IPlanRepository
 {
-    public PlanRepository(CustomerDbContext dbContext) 
+    public PlanRepository(OnRoadContext dbContext) 
         : base(dbContext)
     {
     }

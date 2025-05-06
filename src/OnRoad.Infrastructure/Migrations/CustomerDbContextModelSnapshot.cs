@@ -10,7 +10,7 @@ using OnRoad.Infrastructure;
 
 namespace OnRoad.Infrastructure.Migrations
 {
-    [DbContext(typeof(CustomerDbContext))]
+    [DbContext(typeof(OnRoadContext))]
     partial class CustomerDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

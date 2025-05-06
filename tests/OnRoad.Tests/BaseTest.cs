@@ -17,13 +17,13 @@ public class BaseTest : IClassFixture<CustomWebApplicationFactory<Program>>, IAs
 
     public async Task InitializeAsync()
     {
-        var database = Factory.Services.GetRequiredService<CustomerDbContext>();
+        var database = Factory.Services.GetRequiredService<OnRoadContext>();
         await database.Database.MigrateAsync();
     }
 
     public async Task DisposeAsync()
     {
-        var database = Factory.Services.GetRequiredService<CustomerDbContext>();
+        var database = Factory.Services.GetRequiredService<OnRoadContext>();
         
         await database.Database.EnsureDeletedAsync();
     }

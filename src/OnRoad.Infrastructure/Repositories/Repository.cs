@@ -8,9 +8,9 @@ namespace OnRoad.API.Infrastructure;
 
 public class Repository<T> : IRepository<T> where T : class, IEntity 
 {
-    protected readonly CustomerDbContext DbContext;
+    protected readonly OnRoadContext DbContext;
 
-    public Repository(CustomerDbContext dbContext)
+    public Repository(OnRoadContext dbContext)
     {
         DbContext = dbContext;
     }
