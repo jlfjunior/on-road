@@ -29,7 +29,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\OnRoad.Features\OnRoad.Features.csproj" />
+      <ProjectReference Include="..\..\OnRoad.Application\OnRoad.Application.csproj" />
       <ProjectReference Include="..\OnRoad.Infrastructure\OnRoad.Infrastructure.csproj" />
     </ItemGroup>
 

@@ -1,7 +1,7 @@
 using System.Net.Http.Json;
 using Bogus;
-using OnRoad.Features.Vehicles.Commands.Create;
-using OnRoad.Features.Vehicles.Responses;
+using OnRoad.Application.Vehicles.Commands.Create;
+using OnRoad.Application.Vehicles.Responses;
 
 namespace OnRoad.Tests.Vehicles;
 

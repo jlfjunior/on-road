@@ -1,7 +1,7 @@
 using MediatR;
-using OnRoad.Features.Customers.Commands.Create;
-using OnRoad.Features.Customers.Commands.Update;
-using OnRoad.Features.Customers.Queries.List;
+using OnRoad.Application.Customers.Commands.Create;
+using OnRoad.Application.Customers.Commands.Update;
+using OnRoad.Application.Customers.Queries.List;
 
 namespace OnRoad.API.Endpoints;
 

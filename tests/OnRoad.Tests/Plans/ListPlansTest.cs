@@ -1,9 +1,9 @@
 using System.Net.Http.Json;
 using Bogus;
 using Microsoft.Extensions.DependencyInjection;
+using OnRoad.Application.Contracts.Plans.Responses;
 using OnRoad.Domain;
 using OnRoad.Domain.Entities;
-using OnRoad.Features.Contracts.Plans.Responses;
 
 namespace OnRoad.Tests.Plans;
 

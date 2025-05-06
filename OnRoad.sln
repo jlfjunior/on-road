@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnRoad.Domain", "src\OnRoad
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnRoad.Infrastructure", "src\OnRoad.Infrastructure\OnRoad.Infrastructure.csproj", "{49BE8C6F-1DF5-44AA-9E15-981EEFAA4D17}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnRoad.Features", "OnRoad.Features\OnRoad.Features.csproj", "{685350DC-47E0-4042-86DB-0B750AC58C66}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnRoad.Application", "OnRoad.Application\OnRoad.Application.csproj", "{685350DC-47E0-4042-86DB-0B750AC58C66}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

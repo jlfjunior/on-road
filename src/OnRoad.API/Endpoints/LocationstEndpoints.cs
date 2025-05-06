@@ -1,7 +1,7 @@
 using MediatR;
-using OnRoad.Features.Contracts.Locations.Commands.Create;
-using OnRoad.Features.Contracts.Locations.Commands.Finish;
-using OnRoad.Features.Contracts.Locations.Queries;
+using OnRoad.Application.Contracts.Locations.Commands.Create;
+using OnRoad.Application.Contracts.Locations.Commands.Finish;
+using OnRoad.Application.Contracts.Locations.Queries;
 
 namespace OnRoad.API.Endpoints;
 
