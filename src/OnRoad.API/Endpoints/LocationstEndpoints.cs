@@ -1,11 +1,11 @@
 using MediatR;
-using OnRoad.Application.Contracts.Locations.Commands.Create;
-using OnRoad.Application.Contracts.Locations.Commands.Finish;
+using OnRoad.Application.Commands.CreateLocation;
+using OnRoad.Application.Commands.FinishLocation;
 using OnRoad.Application.Contracts.Locations.Queries;
 
 namespace OnRoad.API.Endpoints;
 
-public static class LocationstEndpoints
+public static class LocationsEndpoints
 {
     public static void MapLocationEndpoints(this IEndpointRouteBuilder app)
     {

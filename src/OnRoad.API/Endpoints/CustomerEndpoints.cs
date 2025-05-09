@@ -1,6 +1,6 @@
 using MediatR;
-using OnRoad.Application.Customers.Commands.Create;
-using OnRoad.Application.Customers.Commands.Update;
+using OnRoad.Application.Commands.CreateCustomer;
+using OnRoad.Application.Commands.UpdateCustomer;
 using OnRoad.Application.Customers.Queries.List;
 
 namespace OnRoad.API.Endpoints;

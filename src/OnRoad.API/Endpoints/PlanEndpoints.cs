@@ -1,7 +1,7 @@
 using MediatR;
 using OnRoad.API.Features.Contracts.Plans.Queries;
-using OnRoad.Application.Contracts.Plans.Commands.Create;
-using OnRoad.Application.Contracts.Plans.Commands.Update;
+using OnRoad.Application.Commands.CreatePlan;
+using OnRoad.Application.Commands.UpdatePlan;
 
 namespace OnRoad.API.Endpoints;
 

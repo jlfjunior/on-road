@@ -1,7 +1,7 @@
 using System.Net.Http.Json;
 using Bogus;
 using Microsoft.Extensions.DependencyInjection;
-using OnRoad.Application.Contracts.Plans.Responses;
+using OnRoad.Application.Models.Responses;
 using OnRoad.Domain;
 using OnRoad.Domain.Entities;
 

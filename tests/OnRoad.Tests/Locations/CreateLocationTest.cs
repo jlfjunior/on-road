@@ -1,7 +1,7 @@
 using System.Net.Http.Json;
 using Microsoft.Extensions.DependencyInjection;
-using OnRoad.Application.Contracts.Locations.Commands.Create;
-using OnRoad.Application.Contracts.Locations.Responses;
+using OnRoad.Application.Commands.CreateLocation;
+using OnRoad.Application.Models.Responses;
 using OnRoad.Domain;
 using OnRoad.Domain.Entities;
 using OnRoad.SharedKernel;

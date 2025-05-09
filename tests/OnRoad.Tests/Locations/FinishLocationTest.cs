@@ -1,7 +1,7 @@
 using System.Net;
 using System.Net.Http.Json;
 using Microsoft.Extensions.DependencyInjection;
-using OnRoad.Application.Contracts.Locations.Commands.Finish;
+using OnRoad.Application.Commands.FinishLocation;
 using OnRoad.Domain;
 using OnRoad.Domain.Entities;
 using OnRoad.SharedKernel;

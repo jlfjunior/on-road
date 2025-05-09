@@ -1,7 +1,7 @@
 using MediatR;
 using OnRoad.API.Features.Vehicles.Queries.List;
-using OnRoad.Application.Vehicles.Commands.Create;
-using OnRoad.Application.Vehicles.Commands.Delete;
+using OnRoad.Application.Commands.CreateVehicle;
+using OnRoad.Application.Commands.DeleteVehicle;
 
 namespace OnRoad.API.Endpoints;
 

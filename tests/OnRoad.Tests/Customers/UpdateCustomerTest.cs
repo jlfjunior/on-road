@@ -2,7 +2,7 @@
 using Bogus;
 using Bogus.Extensions.Brazil;
 using Microsoft.Extensions.DependencyInjection;
-using OnRoad.Application.Customers.Commands.Update;
+using OnRoad.Application.Commands.UpdateCustomer;
 using OnRoad.Domain.Entities;
 using OnRoad.SharedKernel;
 
