@@ -1,20 +1,16 @@
 services:
-  postgres:
-    image: postgres
-    container_name: pgsql_customers
-    restart: unless-stopped
+  mongo:
+    image: mongo
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: MongoDB2019!
     ports:
-      - "5432:5432"
-    volumes:
-      - pgsql_data:/var/lib/postgresql/data
+      - "27017:27017"
+#    volumes:
+#      - /home/renatogroffe/Desenvolvimento/Docker/Volumes/MongoDB:/data/db
     networks:
-      - customers_net
-
-volumes:
-  pgsql_data:
+      - mongo-compose-network
 
 networks:
-  customers_net:
+  mongo-compose-network:
+    driver: bridge
