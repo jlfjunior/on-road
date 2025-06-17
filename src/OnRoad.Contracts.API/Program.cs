@@ -56,6 +56,8 @@ app.MapPost("/contracts", async (ContractRequest request, IContractService servi
     .WithTags("Contracts")
     .WithName("AddContract");
 
+app.MapGet("health", () => Results.Ok("Service is running"));
+
 app.Run();
 
 public partial class Program { }

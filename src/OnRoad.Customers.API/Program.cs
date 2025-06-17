@@ -44,6 +44,8 @@ app.MapDelete("/customers/{Id}", async (Guid Id, ICustomerService service) =>
     .WithTags("Customers")
     .WithName("DeleteCustomer");
 
+app.MapGet("health", () => Results.Ok("Service is running"));
+
 app.Run();
 
 public partial class Program { }
