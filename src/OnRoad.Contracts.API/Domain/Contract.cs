@@ -8,10 +8,10 @@ public class Contract : IEntity
 {
     public Contract(Guid customerId, Guid vehicleId, DateOnly startDate)
     {
+        Id = Guid.CreateVersion7();
         CustomerId = customerId;
         VehicleId = vehicleId;
         StartDate = startDate;
-        Id = Guid.NewGuid();
     }
     
     [BsonId, BsonRepresentation(BsonType.String)]

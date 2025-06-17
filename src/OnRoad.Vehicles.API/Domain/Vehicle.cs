@@ -8,7 +8,7 @@ public class Vehicle : IEntity
 {
     public Vehicle(string model)
     {
-        Id = Guid.NewGuid();
+        Id = Guid.CreateVersion7();
         Model = model;
     }
     

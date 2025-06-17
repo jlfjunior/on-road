@@ -8,7 +8,7 @@ public class Customer : IEntity
 {
     public Customer(string fullName, string documentTax, DateOnly birthDate)
     {
-        Id = Guid.NewGuid();
+        Id = Guid.CreateVersion7();
         FullName = fullName;
         DocumentTax = documentTax;
         BirthDate = birthDate;

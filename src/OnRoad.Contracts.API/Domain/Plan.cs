@@ -8,12 +8,12 @@ public class Plan : IEntity
 {
     public Plan(string description, int durationInDays, decimal dailyRate, decimal extraDayRate, decimal penaltyFee)
     {
+        Id = Guid.CreateVersion7();
         Description = description;
         DurationInDays = durationInDays;
         DailyRate = dailyRate;
         ExtraDayRate = extraDayRate;
         PenaltyFee = penaltyFee;
-        Id = Guid.NewGuid();
         Version = 1;
     }
     
